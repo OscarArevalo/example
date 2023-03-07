@@ -1,7 +1,7 @@
 name: Test Controller
 on: push
 jobs:
-  unit-test:
+  tests:
     runs-on: ubuntu-latest
     steps:
       - name: Pull to Runer
@@ -19,7 +19,7 @@ jobs:
         run: npm test
   
   deployment:
-    needs: unit-test
+    needs: tests
     runs-on: ubuntu-latest
     steps:
       - name: deployment
