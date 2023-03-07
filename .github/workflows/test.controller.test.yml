@@ -9,8 +9,8 @@ jobs:
 
       - name: Install nodeJS
         uses: actions/setup-node@v3
-          with:
-            node-version:18
+        with:
+          node-version:18
       
       - name: Instal Dependencies
         run: npm ci
