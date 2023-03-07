@@ -1,0 +1,26 @@
+name: Test Controller
+on: push
+jobs:
+  unit-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Pull to Runer
+        uses: actions/checkout@v3
+
+      - name: Install nodeJS
+        uses: actions/setup-node@v3
+          with:
+            node-version:18
+      
+      - name: Instal Dependencies
+        run: npm ci
+
+      - name: Run test
+        run: npm run test
+  
+  deployment:
+    needs: unit-test
+    runs-on: ubuntu-latest
+    steps:
+      - name: deployment
+        run: echo "Deployment on GCP"
