@@ -1,5 +1,7 @@
+const axios = require('axios');
+const { response } = require('../../todo-tdd/app');
+
 const test = (req, res ) => {
-    console.log('llego a test');
     res.json('Esto es un test');
 }
 
@@ -8,7 +10,16 @@ const suma = (req, res) => {
     res.json({'total': total});
 }
 
+const getUser = (req, res) => {
+    axios.get('https://jsonplaceholder.typicode.com/todos/1').then((axResp) => {
+        res.json(axResp.data);
+    });
+}
+
+
+
 module.exports = {
     test: test,
-    suma: suma
+    suma: suma,
+    getUser: getUser
 }

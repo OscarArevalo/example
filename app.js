@@ -7,10 +7,6 @@ app.use(express.json());
 const testRoutes = require('./routes/test.routes');
 testRoutes(app);
 
-app.get('/', (req, res) => {
-    res.json('Hola Mundo XD');
-});
-
 app.listen(port, () => {
     console.log(`Servidor corriendo en pueto ${port}`);
 });

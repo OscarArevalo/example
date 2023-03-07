@@ -12,5 +12,12 @@ beforeEach(()=>{
 describe('testController.suma', () => {
     it('Debe existir la funcion de suma', () => {
         expect(typeof testController.suma).toBe('function');
-    })
+    });
+    
+    it('El servicio dummy esta corriendo', async () => {
+        await testController.getUser(req, res);
+        console.log(res);
+        expect(res.statusCode).toBe(200);
+    });
+
 });
