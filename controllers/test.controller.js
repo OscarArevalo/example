@@ -11,7 +11,7 @@ const suma = (req, res) => {
 
 const getUser = (req, res) => {
     axios.get('https://jsonplaceholder.typicode.com/todos/1').then((axResp) => {
-        res.json(axResp.data);
+        res.status(200).json(axResp.data);
     });
 }
 

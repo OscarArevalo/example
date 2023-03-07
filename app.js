@@ -10,3 +10,5 @@ testRoutes(app);
 app.listen(port, () => {
     console.log(`Servidor corriendo en pueto ${port}`);
 });
+
+module.exports = app;
