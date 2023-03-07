@@ -11,7 +11,7 @@ beforeEach(()=>{
 
 describe('testController.suma', () => {
     it('Debe existir la funcion de suma', () => {
-        expect(typeof testController.suma).toBe('function');
+        expect(typeof s.suma).toBe('function');
     });
     
     it('El servicio dummy esta corriendo', async () => {

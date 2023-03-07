@@ -1,5 +1,4 @@
 const axios = require('axios');
-const { response } = require('../../todo-tdd/app');
 
 const test = (req, res ) => {
     res.json('Esto es un test');
@@ -15,8 +14,6 @@ const getUser = (req, res) => {
         res.json(axResp.data);
     });
 }
-
-
 
 module.exports = {
     test: test,
